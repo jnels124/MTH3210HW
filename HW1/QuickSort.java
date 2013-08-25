@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 public class QuickSort {
-    public static void swap ( int population[], int thisInt, int  thatInt ) {
+    private static void swap ( int population[], int thisInt, int  thatInt ) {
         int temp = population[thisInt];
         population[thisInt] = population[thatInt];
         population[thatInt] = temp;
@@ -10,7 +10,7 @@ public class QuickSort {
 
     // Reorganizes the given list so all elements less than the first are 
     // before it and all greater elements are after it.                   
-    public static int partition( int population[], int first, int last ) {
+    private static int partition( int population[], int first, int last ) {
         int pivot = population[first];
         while ( first < last ) {
             if ( population[first] == pivot || population[last] == pivot ) {

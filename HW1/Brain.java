@@ -24,24 +24,6 @@ public class Brain {
     public Brain () {
        
     }
-    
-    final ArrayList<Double> readObservationsFile ( final String fileName ) {
-    	ArrayList<Double> observations = new ArrayList<Double>();
-    	String currentLine;
-    	try { 
-    		Scanner inFile = new Scanner ( new FileReader ( fileName ) );
-    		while ( inFile.hasNext() ) {
-    			currentLine = inFile.nextLine();
-    			observations.add( Double.parseDouble( currentLine ) );
-        	}
-    	} catch( FileNotFoundException e ) {
-    		System.out.println( "File Not found" );
-    	} catch( Exception e ) {
-    		System.out.println( "!!!!!ERROR!!!!!\nUnkown exception occured");
-    	}
-    	
-        return observations;
-    }
 
     final double findMean ( final ArrayList<Double> population ) {
     	double sum = 0;
@@ -83,19 +65,6 @@ public class Brain {
      * 
      * This is a quick sort algorithm. Not the best but it is easy to implement.
      * */
-    private ArrayList<Double> sortPopulation ( ArrayList<Double> population,
-    										   ArrayList<Double> sorted 
-    										 ) {
-    	ArrayList<Double> lowerHalf = new ArrayList<Double>();
-    	ArrayList<Double> upperHalf = new ArrayList<Double>();
-    	Random rand = new Random( population.size() ) ;
-    	if ( population.size( ) <= 1 ) {
-    		return sorted;
-    	}
-    	int pivot = rand.nextInt();
-    	
-    	return null;
-    }
     
     final double [] percentageOfFallingWithin1_2_3StdDev () {
     	
